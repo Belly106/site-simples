@@ -1,0 +1,49 @@
+:root{ /*representa o elemento html do arquivo index.html - ":root" seria um seletor*/
+    --grey:  rgb(216, 219, 177);
+    --white: #ffffff;               /*variáveis*/
+    --black: #000000;
+    --darkGrey: #a9a9a9;
+}
+*{ /*seletor universal que se aplica a toda página, até outro com elemento mais específico subtituí-lo
+    o usa com o objetivo de definir a propriedade de cor padrão.*/ 
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--bg);
+}
+ul{ /* lista não ordenada - puxa do html o <ul> */
+    /* propriedade*/ font-family: Arial, Helvetica, sans-serif; /*valor*/ /* = chave-valor*/
+}
+li{
+    list-style: circle;
+}
+.list{ /*atributo de ul (HTML) personalizado - o " . "  é prefixo de período*/
+    list-style: square;
+}
+.light-theme{
+    --bg : var(--grey); /*bg = backgroud - var = variáveis */
+    --fontColor: var(--black);
+    --bntBg: var(--black);
+    --bntFontColor: var(--white);
+}
+.dark-theme{
+    --bg:var(--darkGrey);
+    --fontColor: var(--white);
+    --bntBg: var(--white);
+    --bntFontColor:var(--black);
+}
+.btn{ /*comandos para layout do botão*/
+    position: absolute;
+    top: 20px; /*uNIDADE EM PIXEL=definir a largura ou largura de elementos, espessura de borda,
+     tamanho de texto e outras.*/
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var (--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus{outline-style: none;} /* OUTLINE-STYLE: NONE = elimina um contorno retangular
+ quando o botão é selecionado (recebe foco).*/
